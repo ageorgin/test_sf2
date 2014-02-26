@@ -1,0 +1,5 @@
+ageorgin_test:
+    resource: "@AgeorginTestBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
