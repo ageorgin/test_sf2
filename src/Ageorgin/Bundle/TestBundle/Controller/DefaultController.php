@@ -7,6 +7,10 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
 use Ageorgin\Bundle\TestBundle\Entity\Diffusion;
 
+/**
+ * Ce controlleur utilise juste le système de sérialisation
+ * via le bundle JMSSerializerBundle
+ */
 class DefaultController extends Controller
 {
     /**

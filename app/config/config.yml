@@ -64,3 +64,8 @@ swiftmailer:
     username:  "%mailer_user%"
     password:  "%mailer_password%"
     spool:     { type: memory }
+    
+# Configuration FOSRestBundle
+fos_rest:
+    routing_loader:
+        default_format: json

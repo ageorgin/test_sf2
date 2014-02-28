@@ -1,13 +1,17 @@
 <?php
 namespace Ageorgin\Bundle\TestBundle\Entity;
 
-use JMS\Serializer\Annotation;
-
 class Diffusion
 {
+    /**
+     *
+     * @var type int
+     * @
+     */
     public $id;
     public $dateDiffusion;
     public $titre;
+    public $description = 'bla bla';
 
     public function __construct(){}
 }

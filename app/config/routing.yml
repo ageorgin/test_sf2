@@ -3,3 +3,8 @@ ageorgin_test:
     type:     annotation
     prefix:   /
 
+# Activation de FOSRestBundle pour générer en auto les routes de toutes les actions du controller TestRestController
+testrest:
+    type: rest
+    resource: Ageorgin\Bundle\TestBundle\Controller\TestRestController
+    
