@@ -19,6 +19,7 @@ class AppKernel extends Kernel
             new Ageorgin\Bundle\TestBundle\AgeorginTestBundle(),
 	    new JMS\SerializerBundle\JMSSerializerBundle(),
             new FOS\RestBundle\FOSRestBundle(),
+            new FTVEN\Bundle\SivideoCoreBundle\FTVENSivideoCoreBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {
