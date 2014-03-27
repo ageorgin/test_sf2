@@ -18,14 +18,14 @@ class CatalogVideo {
     
     /**
      * @ORM\Id
-     * @ORM\ManyToOne(targetEntity="FTVEN\bundle\SivideoCoreBundle\Entity\Assets\Video")
+     * @ORM\ManyToOne(targetEntity="FTVEN\Bundle\SivideoCoreBundle\Entity\Assets\Video")
      * @ORM\JoinColumn(name="video_id", referencedColumnName="id")
      */
     private $video;
     
     /**
      * @ORM\Id
-     * @ORM\ManyToOne(targetEntity="FTVEN\bundle\SivideoCoreBundle\Entity\Assets\Variant")
+     * @ORM\ManyToOne(targetEntity="FTVEN\Bundle\SivideoCoreBundle\Entity\Assets\Variant")
      * @ORM\JoinColumn(name="variant_id", referencedColumnName="id")
      */
     private $variant;
