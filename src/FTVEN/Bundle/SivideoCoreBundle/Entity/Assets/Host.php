@@ -25,4 +25,30 @@ class Host {
      * @ORM\Column(type="string", length=255)
      */
     private $pattern;
+    
+    public function getId() {
+        return $this->id;
+    }
+
+    public function getName() {
+        return $this->name;
+    }
+
+    public function getPattern() {
+        return $this->pattern;
+    }
+
+    public function setId($id) {
+        $this->id = $id;
+    }
+
+    public function setName($name) {
+        $this->name = $name;
+    }
+
+    public function setPattern($pattern) {
+        $this->pattern = $pattern;
+    }
+
+
 }

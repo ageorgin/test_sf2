@@ -39,4 +39,45 @@ class Variant {
      */
     private $status;
     
+    public function getId() {
+        return $this->id;
+    }
+
+    public function getHost() {
+        return $this->host;
+    }
+
+    public function getFormat() {
+        return $this->format;
+    }
+
+    public function getCoding() {
+        return $this->coding;
+    }
+
+    public function getStatus() {
+        return $this->status;
+    }
+
+    public function setId($id) {
+        $this->id = $id;
+    }
+
+    public function setHost($host) {
+        $this->host = $host;
+    }
+
+    public function setFormat($format) {
+        $this->format = $format;
+    }
+
+    public function setCoding($coding) {
+        $this->coding = $coding;
+    }
+
+    public function setStatus($status) {
+        $this->status = $status;
+    }
+
+
 }
