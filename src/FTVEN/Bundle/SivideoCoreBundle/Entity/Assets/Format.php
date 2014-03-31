@@ -3,6 +3,7 @@
 namespace FTVEN\Bundle\SivideoCoreBundle\Entity\Assets;
 
 use Doctrine\ORM\Mapping as ORM;
+use Doctrine\Common\Collections\ArrayCollection;
 
 /**
  * @ORM\Entity
@@ -21,6 +22,15 @@ class Format {
      */
     private $name;
     
+    /**
+     * @ORM\OneToMany(targetEntity="Variant", mappedBy="format")
+     */
+    private $variants;
+    
+    public function __contruct() {
+        $this->variants = new ArrayCollection();
+    }
+    
     public function getId() {
         return $this->id;
     }
@@ -35,5 +45,13 @@ class Format {
 
     public function setName($name) {
         $this->name = $name;
+    }
+    
+    public function getVariants() {
+        return $this->variants;
+    }
+
+    public function setVariants($variants) {
+        $this->variants = $variants;
     }
 }

@@ -17,19 +17,19 @@ class Variant {
     private $id;
     
     /**
-     * @ORM\ManyToOne(targetEntity="Host")
+     * @ORM\ManyToOne(targetEntity="Host", inversedBy="variants")
      * @ORM\JoinColumn(name="host_id", referencedColumnName="id")
      */
     private $host;
     
     /**
-     * @ORM\ManyToOne(targetEntity="Format")
+     * @ORM\ManyToOne(targetEntity="Format", inversedBy="variants")
      * @ORM\JoinColumn(name="format_id", referencedColumnName="id")
      */
     private $format;
     
     /**
-     * @ORM\ManyToOne(targetEntity="Coding")
+     * @ORM\ManyToOne(targetEntity="Coding", inversedBy="variants")
      * @ORM\JoinColumn(name="coding_id", referencedColumnName="id")
      */
     private $coding;

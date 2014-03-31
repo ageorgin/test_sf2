@@ -13,3 +13,6 @@ testrest:
     type: rest
     resource: Ageorgin\Bundle\TestBundle\Controller\TestRestController
     
+ftven_sivideo_rest:
+    type: rest
+    resource: FTVEN\Bundle\SivideoCoreBundle\Controller\RestController

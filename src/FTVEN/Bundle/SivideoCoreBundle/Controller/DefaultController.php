@@ -18,9 +18,15 @@ class DefaultController extends Controller
     {
         $em = $this->getDoctrine()->getManager();
 //        $format = $em->find('FTVEN\Bundle\SivideoCoreBundle\Entity\Assets\Format', 1);
-        $variant  = $em->find('FTVEN\Bundle\SivideoCoreBundle\Entity\Assets\Variant', 1);
+        //$variant  = $em->find('FTVEN\Bundle\SivideoCoreBundle\Entity\Assets\Variant', 1);
+        $host  = $em->find('FTVENSivideoCoreBundle:Assets\Host', 1);
         
-        var_dump($variant->getHost()->getName());
+        $variants = $host->getVariants();
+        foreach($variants as $variant) {
+            echo $variant->getId() . '<br/>';
+        }
+        
+        //var_dump($host->getVariants());
         
         return array('name' => 'AZERTY '.$name);
     }
