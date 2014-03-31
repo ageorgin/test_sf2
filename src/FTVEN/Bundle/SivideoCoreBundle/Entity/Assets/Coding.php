@@ -4,6 +4,7 @@ namespace FTVEN\Bundle\SivideoCoreBundle\Entity\Assets;
 
 use Doctrine\ORM\Mapping as ORM;
 use Doctrine\Common\Collections\ArrayCollection;
+use JMS\Serializer\Annotation\Exclude;
 
 /**
  * @ORM\Entity
@@ -34,6 +35,7 @@ class Coding {
     
     /**
      * @ORM\OneToMany(targetEntity="Variant", mappedBy="coding")
+     * @Exclude
      */
     private $variants;
     

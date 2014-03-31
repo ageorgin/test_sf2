@@ -78,6 +78,4 @@ class Variant {
     public function setStatus($status) {
         $this->status = $status;
     }
-
-
 }

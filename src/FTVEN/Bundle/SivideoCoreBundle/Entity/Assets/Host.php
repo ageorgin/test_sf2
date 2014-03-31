@@ -4,6 +4,9 @@ namespace FTVEN\Bundle\SivideoCoreBundle\Entity\Assets;
 
 use Doctrine\ORM\Mapping as ORM;
 use Doctrine\Common\Collections\ArrayCollection;
+use JMS\Serializer\Annotation\Exclude;
+use JMS\Serializer\Annotation\VirtualProperty;
+use JMS\Serializer\Annotation\SerializedName;
 
 /**
  * @ORM\Entity
@@ -29,6 +32,7 @@ class Host {
     
     /**
      * @ORM\OneToMany(targetEntity="Variant", mappedBy="host")
+     * @Exclude
      */
     private $variants;
     
@@ -67,6 +71,12 @@ class Host {
     public function setVariants($variants) {
         $this->variants = $variants;
     }
-
-
+    
+    /**
+     * @VirtualProperty
+     * @SerializedName("toto")
+     */
+    public function getToto(){
+        return 'Exemple d\'attribut virtuel';
+    }
 }
