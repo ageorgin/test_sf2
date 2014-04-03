@@ -17,4 +17,14 @@
         </service>
     </services>
     -->
+    
+    <parameters>
+        <parameter key="ftven_sivideo_core.entity_loader.class">FTVEN\Bundle\SivideoCoreBundle\Service\EntityLoaderService</parameter>
+    </parameters>
+    
+    <services>
+        <service id="ftven_sivideo_core.entity_loader" class="%ftven_sivideo_core.entity_loader.class%">
+            <argument type="service" id="doctrine.orm.entity_manager"/>
+        </service>
+    </services>
 </container>
